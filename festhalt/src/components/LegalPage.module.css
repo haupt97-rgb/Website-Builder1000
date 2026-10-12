@@ -1,0 +1,37 @@
+.main {
+  padding-block: 48px 96px;
+  background: var(--sand);
+  min-height: 70vh;
+}
+.sheet {
+  max-width: 860px;
+  margin-inline: auto;
+  padding: clamp(28px, 5vw, 56px);
+}
+.back {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-weight: 600;
+}
+.title {
+  margin: 8px 0 18px;
+}
+.warn {
+  margin-bottom: 28px;
+}
+.body {
+  display: grid;
+  gap: 14px;
+  color: var(--ink-soft);
+}
+.body h2 {
+  margin-top: 22px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.body ul {
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+}

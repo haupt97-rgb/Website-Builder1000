@@ -1,0 +1,74 @@
+.section {
+  padding-block: clamp(72px, 10vw, 120px);
+  background: linear-gradient(180deg, var(--cream), var(--sage));
+}
+.steps {
+  list-style: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 36px);
+  counter-reset: step;
+}
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 74px;
+  border-top: 2px dashed var(--brand-100);
+}
+.step {
+  position: relative;
+  padding: 44px 28px 30px;
+  border-radius: 4px 12px 12px 12px;
+  background: var(--paper);
+  box-shadow: var(--shadow-paper);
+  text-align: center;
+}
+.tab {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  padding: 6px 16px 8px;
+  border-radius: 10px 10px 0 0;
+  background: var(--brand);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--brand-50);
+  color: var(--brand);
+  box-shadow: 0 0 0 8px var(--paper);
+}
+.icon svg {
+  width: 30px;
+  height: 30px;
+}
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.text {
+  margin-top: 10px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .steps::before {
+    display: none;
+  }
+}
